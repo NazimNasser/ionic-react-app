@@ -7,3 +7,8 @@
 .alfa{
     font-family: 'Alfa Slab One', cursive;
 }
+
+.spin-button-none::-webkit-outer-spin-button,
+.spin-button-none::-webkit-inner-spin-button {
+    appearance: none;
+}
