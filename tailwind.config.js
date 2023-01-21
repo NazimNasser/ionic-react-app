@@ -14,7 +14,11 @@ module.exports = {
       xs: { max: "320px" },
       // => @media (max-width: 320px) { ... }
     },
-    extend: {},
+    extend: {
+      boxShadow: {
+        'formShadow': ' 5px 5px 12px -7px rgba(0, 0, 0, 0.06)',
+      }
+    },
   },
   plugins: [],
 }
