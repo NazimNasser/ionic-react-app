@@ -14,8 +14,9 @@
     "@types/react-dom": "^18.0.6",
     "@types/react-router": "^5.1.11",
     "@types/react-router-dom": "^5.1.7",
-    "ionicons": "^6.0.3",
     "history": "^4.9.0",
+    "ionicons": "^6.0.3",
+    "otp-input-x": "^0.9.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^5.2.0",
@@ -60,5 +61,8 @@
       "last 1 safari version"
     ]
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
 }
