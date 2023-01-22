@@ -37,34 +37,38 @@ const Login: React.FC = (props) => {
 
   return (
     <IonPage>
-      <IonContent fullscreen>
-        <div className='alfa text-[32px] font-[400] text-[#FFC800]'>Comfortline</div>
-        <div className=''>
-          <div>enter the 6-digits code</div>
-          <div className="flex justify-center items-center space-x-2">
-            {otp.map((_, index) => {
-              return (
-                <React.Fragment key={index}>
-                  <input
-                    ref={index === activeOTPIndex ? inputRef : null}
-                    type="number"
-                    onChange={handleOnChange}
-                    onKeyDown={(e) => handleOnKeyDown(e, index)}
-                    value={otp[index]}
-                    className="w-8 h-9 border-0 rounded bg-[#EDF4F5] outline-none text-center font-semibold text-xl spin-button-none border-gray-400 focus:border-2 focus:border-blue-500 focus:text-blue-500 text-gray-400 transition"
-                  />
-                  {index === 2 ? <span className="w-2 py-[0.8px] bg-black" /> : (
-                    null
-                  )}
-                </React.Fragment>
-              );
-            })}
+      <IonContent fullscreen className='!bg-[#F5F5F5]'>
+        <div className='alfa text-[32px] font-[400] text-[#FFC800] bg-[#375A64] text-center py-20'>Comfortline</div>
+        <div className='relative w-[85%] mx-auto'>
+          <div className='bg-white pt-10 pb-7 px-3 text-center rounded-2xl absolute -top-8'>
+            <div>ENTER THE <span className='font-bold'>6-DIGITS CODE</span></div>
+            <div className="flex justify-center py-5 items-center space-x-2">
+              {otp.map((_, index) => {
+                return (
+                  <React.Fragment key={index}>
+                    <input
+                      ref={index === activeOTPIndex ? inputRef : null}
+                      type="number"
+                      onChange={handleOnChange}
+                      onKeyDown={(e) => handleOnKeyDown(e, index)}
+                      value={otp[index]}
+                      className="w-9 h-10 border-0 rounded bg-[#EDF4F5] outline-none text-center font-semibold text-xl spin-button-none border-gray-400 focus:border-2 focus:border-blue-500 focus:text-blue-500 text-gray-400 transition"
+                    />
+                    {index === 2 ? <span className="w-2 py-[0.8px] bg-black" /> : (
+                      null
+                    )}
+                  </React.Fragment>
+                );
+              })}
+            </div>
+            <div className='text-[12px] text-[#737373]'>that was distributed by your administrator</div>
+            <div className='w-[85%] mx-auto'>
+              <IonButton onClick={(e) => {
+                e.preventDefault();
+                history.push('/login');
+              }} expand="block" className='mt-10' color="warning">LOGIN</IonButton>
+            </div>
           </div>
-          <div>that was distributed by your administrator</div>
-          <IonButton onClick={(e) => {
-            e.preventDefault();
-            history.push('/login');
-          }} expand="block" className='my-20' color="warning">login</IonButton>
         </div>
       </IonContent>
     </IonPage>
