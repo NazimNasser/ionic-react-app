@@ -1,5 +1,6 @@
 import { IonContent, IonLabel, IonSelect, IonSelectOption, IonImg, IonPage, IonButton, IonFooter, IonTitle, IonToolbar, IonNav, IonHeader } from '@ionic/react'
 import React, { useState } from 'react'
+import Footer from '../components/Footer';
 
 const Block: React.FC = (props) => {
 
@@ -102,16 +103,8 @@ const Block: React.FC = (props) => {
                     </div>
                 </div>
 
-
-                <IonFooter
-                    translucent className='ion-no-border border-t-0  '
-                >
-                    <IonToolbar className='text-center  ' >
-                        <IonTitle className='text-[#828282] font-[Inter] font-normal text-[9px]'>
-                            &copy;ALL RIGHT RESERVED
-                        </IonTitle>
-                    </IonToolbar>
-                </IonFooter>
+                {/* Footer */}
+                <Footer />
 
             </IonContent >
         </IonPage >
@@ -121,4 +114,3 @@ const Block: React.FC = (props) => {
 }
 
 export default Block;
- 
