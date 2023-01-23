@@ -1,9 +1,10 @@
-import { IonButton, IonContent, IonHeader, IonIcon, IonInput, IonItem, IonLabel, IonList, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButton, IonContent, IonIcon, IonPage } from '@ionic/react';
 import React, { useEffect, useRef, useState } from 'react';
 import { useHistory } from 'react-router';
 import { qrCodeOutline } from 'ionicons/icons';
 import { Link } from 'react-router-dom';
 import '../index.css';
+import Header from '../components/Header';
 
 interface Props { }
 
@@ -40,11 +41,13 @@ const Login: React.FC = (props) => {
   return (
     <IonPage>
       <IonContent fullscreen>
-        <div className='!bg-[#F5F5F5] min-h-screen'>
-          <div className='alfa text-[32px] font-[400] text-[#FFC800] bg-[#375A64] text-center py-20'>Comfortline</div>
+        <div className='bg-[#F5F5F5] min-h-screen'>
+          
+          {/* <div className='alfa text-[32px] font-[400] text-[#FFC800] bg-[#375A64] text-center py-20'>Comfortline</div> */}
+          <Header text='' title='Comfortline'/>
           <div className='relative w-[90%] m-auto'>
-            <div className='absolute -top-12 text-center'>
-              <div className='bg-white pt-10 pb-7 px-3 text-center rounded-2xl'>
+            <div className='absolute -top-12 z-10 text-center'>
+              <div className='bg-[white] pt-10 pb-7 px-3 text-center rounded-2xl'>
                 <div>ENTER THE <span className='font-bold'>6-DIGITS CODE</span></div>
                 <div className="flex justify-center py-5 items-center space-x-2">
                   {otp.map((_, index) => {
@@ -75,7 +78,7 @@ const Login: React.FC = (props) => {
               </div>
               <div className='py-6 text-[24px]'>OR</div>
               <Link to="/">
-                <div className='flex p-5 rounded-2xl items-center bg-white'>
+                <div className='flex p-5 rounded-2xl items-center bg-[white]'>
                   <div className='mr-4'>
                     <IonIcon className='text-[50px]' icon={qrCodeOutline}></IonIcon>
                   </div>

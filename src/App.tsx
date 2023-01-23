@@ -34,6 +34,7 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import Block from './pages/Block';
+import Preparing from './pages/Preparing';
 
 setupIonicReact();
 
@@ -55,7 +56,10 @@ const App: React.FC = () => (
           <Tab3 />
         </Route>
         <Route path="/block">
-          <Block/>
+          <Block />
+        </Route>
+        <Route path="/preparing">
+          <Preparing />
         </Route>
         <Redirect to="/" />
       </IonRouterOutlet>

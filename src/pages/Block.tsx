@@ -1,6 +1,8 @@
-import { IonContent, IonLabel, IonSelect, IonSelectOption, IonImg, IonPage, IonButton, IonFooter, IonTitle, IonToolbar, IonNav, IonHeader } from '@ionic/react'
+import { IonContent, IonLabel, IonSelect, IonSelectOption, IonImg, IonPage, IonButton } from '@ionic/react'
 import React, { useState } from 'react'
+import { useHistory } from 'react-router';
 import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 const Block: React.FC = (props) => {
 
@@ -25,20 +27,19 @@ const Block: React.FC = (props) => {
         return status;
     }
 
+    const history = useHistory();
+
     return (
 
         <IonPage>
 
             <IonContent fullscreen >
-                <div className='!bg-[#F5F5F5] min-h-screen'>
+                <div className='bg-[#F5F5F5] min-h-screen'>
 
-                    <IonHeader className='bg-[#375A64] relative w-full pt-20 flex flex-col items-center mb-2 justify-around'>
-                        <IonTitle className='alfa text-[32px] font-[400] leading-10 text-[#FFC800]'>Comfortline</IonTitle>
-                        <p className='text-white font-normal text-[19px] my-10 leading-6'>Welcome to BLOCK C</p>
-                    </IonHeader>
+                    <Header text='Welcome to BLOCK C' title='Comfortline' />
 
                     <div className='w-full h-full relative '>
-                        <div className='w-[90%] h-auto shadow-formShadow z-10 bg-white m-auto left-0.5 right-0.5 rounded-[20px] absolute -top-8 flex flex-col items-center px-8 pt-4 pb-2'>
+                        <div className='w-[90%] h-auto shadow-lg z-10 bg-[white] m-auto left-0.5 right-0.5 rounded-[20px] absolute -top-8 flex flex-col items-center px-8 pt-4 pb-2'>
                             {/* Gif */}
                             <div>
                                 <IonImg
@@ -48,7 +49,7 @@ const Block: React.FC = (props) => {
                             </div>
 
                             {/* header */}
-                            <article className='text-[#375A64]'>
+                            <article className='text-dabg-dark'>
                                 <p className='text-[14px]'>Please reply to the following questions to help building your profile.</p>
                             </article>
 
@@ -94,23 +95,26 @@ const Block: React.FC = (props) => {
                                 {/* button */}
                                 <div className='py-4'>
 
-                                <IonButton
-                                    expand='block'
-                                    className='rounded bg-[#375A64] '
-                                    color={'#375a64'}
-                                    disabled={checkIfEmpty(options)}
-                                >CONTINUE
-                                </IonButton>
+                                    <IonButton
+                                        expand='block'
+                                        className='rounded bg-dark '
+                                        color={'#375A64'}
+                                        disabled={checkIfEmpty(options)}
+                                        onClick={() => {
+                                            history.push('/preparing')
+                                        }}
+
+                                    >CONTINUE
+                                    </IonButton>
                                 </div>
                             </form>
                         </div>
                     </div>
 
                 </div>
-                <Footer />
-                {/* Footer */}
 
-                {/* Header */}
+               
+                <Footer />
 
             </IonContent >
         </IonPage >

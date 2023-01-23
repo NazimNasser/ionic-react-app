@@ -3,9 +3,16 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter&display=swap');
 
-.alfa{
+
+
+.alfa {
     font-family: 'Alfa Slab One', cursive;
+}
+
+.inter {
+    font-family: 'Inter', sans-serif;
 }
 
 .spin-button-none::-webkit-outer-spin-button,
