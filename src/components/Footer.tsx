@@ -7,11 +7,9 @@ const Footer: React.FC = () => {
             <IonFooter
                 translucent className='ion-no-border border-t-0 '
             >
-                <IonToolbar className='text-center ' >
-                    <IonTitle className='text-[#828282] font-[Inter] font-normal text-[9px]'>
+                    <IonTitle className='text-[#828282] pb-6 bg-[#F5F5F5] text-center font-[Inter] font-normal text-[9px]'>
                         &copy;ALL RIGHT RESERVED
                     </IonTitle>
-                </IonToolbar>
             </IonFooter>
         </div>
     )

@@ -107,8 +107,8 @@ const Block: React.FC = (props) => {
                     </div>
 
                 </div>
-                {/* Footer */}
                 <Footer />
+                {/* Footer */}
 
                 {/* Header */}
 
