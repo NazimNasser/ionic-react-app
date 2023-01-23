@@ -35,6 +35,7 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import Block from './pages/Block';
 import Preparing from './pages/Preparing';
+import Feedback from './pages/Feedback';
 
 setupIonicReact();
 
@@ -60,6 +61,9 @@ const App: React.FC = () => (
         </Route>
         <Route path="/preparing">
           <Preparing />
+        </Route>
+        <Route path="/feedback">
+          <Feedback />
         </Route>
         <Redirect to="/" />
       </IonRouterOutlet>

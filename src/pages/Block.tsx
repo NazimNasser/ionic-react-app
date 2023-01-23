@@ -36,7 +36,7 @@ const Block: React.FC = (props) => {
             <IonContent fullscreen >
                 <div className='bg-[#F5F5F5] min-h-screen'>
 
-                    <Header text='Welcome to BLOCK C' title='Comfortline' />
+                    <Header  text='Welcome to BLOCK C' title='Comfortline' />
 
                     <div className='w-full h-full relative '>
                         <div className='w-[90%] h-auto shadow-lg z-10 bg-[white] m-auto left-0.5 right-0.5 rounded-[20px] absolute -top-8 flex flex-col items-center px-8 pt-4 pb-2'>

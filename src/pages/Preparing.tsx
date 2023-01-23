@@ -90,7 +90,9 @@ const Preparing: React.FC = () => {
                 <IonCard className="w-[95%] my-7 h-[88px] left-0.5 right-0.5 rounded-[20px] -top-8 z-10 bg-[white] shadow-lg m-auto">
                     <IonCardContent className="h-full bg- flex flex-row justify-between items-center">
 
-                        <IonImg className='w-[60px] h-[60px] mx-4 m-auto text-sm'
+                        <IonImg
+                        onClick={()=>history.push('/feedback')}
+                        className='w-[60px] h-[60px] mx-4 m-auto text-sm'
                             src="/assets/images/checkMark.jpg" alt="checkMark">
                         </IonImg>
 
