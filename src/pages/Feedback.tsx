@@ -8,7 +8,27 @@ import Header from '../components/Header'
 const Feedback: React.FC = (props) => {
 
     // Forms Switch
-    const [formSwitch, setFormSwitch] = useState(2)
+    const [formSwitch, setFormSwitch] = useState(1)
+    const [roomForm, setRoomForm] = useState('')
+
+    // Room Form
+    const handleChangeModal = (event: any) => {
+        event.preventDefault();
+        setRoomForm(event.target.value)
+        setFormSwitch(2)
+        console.log('rrr', roomForm);
+
+    }
+
+    const checkIfEmpty = (obj: any) => {
+        let status = false
+        for (let key in obj) {
+            if (obj[key] === "") {
+                status = true
+            }
+        }
+        return status;
+    }
     return (
         <IonPage>
 
@@ -29,6 +49,8 @@ const Feedback: React.FC = (props) => {
                             <IonLabel className='text-[14px]'>Select your room</IonLabel>
                             <IonSelect
                                 name="room"
+                                onIonChange={handleChangeModal}
+
                             >
                                 <IonSelectOption value="1">1</IonSelectOption>
                                 <IonSelectOption value="2">2</IonSelectOption>
@@ -42,7 +64,7 @@ const Feedback: React.FC = (props) => {
                         </p>
                     </IonCard>
 
-                    : formSwitch === 2 ?
+                    : roomForm != '' && formSwitch === 2 ?
                         <Forms setFormSwitch={setFormSwitch} formSwitch={formSwitch} title='Thermal comfort' question='How do you find thermal comfort?' />
 
                         : formSwitch === 3 ?
