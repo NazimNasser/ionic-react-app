@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
         <IonFooter
             translucent className='ion-no-border border-t-0  '
         >
-            <IonTitle className='text-[#828282] py-4  text-center font-normal text-xs'>
+            <IonTitle className='text-[#828282] py-4 bg-[#F5F5F5] text-center font-normal text-xs'>
                 &copy;ALL RIGHT RESERVED
             </IonTitle>
         </IonFooter>

@@ -1,6 +1,5 @@
 import { IonCard, IonCardSubtitle, IonCardTitle, IonContent, IonImg, IonLabel, IonPage, IonSelect, IonSelectOption } from "@ionic/react"
 
- 
 type Props = {
     formSwitch: number;
     title: string;
@@ -11,12 +10,12 @@ type Props = {
 const Forms: React.FC<Props> = ({ formSwitch, title, question, setFormSwitch }) => {
     return (
 
-        <IonCard className="w-[95%] h-[275px] p-5 flex flex-col  justify-evenly  left-0.5 right-0.5 rounded-[20px] -top-8 z-10 bg-[white] shadow-lg  m-auto">
-            <IonCardTitle class='inter text-dark border-b-2 w-32 pb-2 text-[12px] uppercase'>
+        <IonCard className="w-[90%] h-auto p-5 flex flex-col  justify-evenly rounded-[20px] -top-8 z-10 bg-[white] shadow-lg  m-auto">
+            <IonCardTitle class='inter text-dark border-b-[1px] border-[#375a6467] w-32 pb-2 text-[12px] uppercase'>
                 {title}
             </IonCardTitle>
 
-            <IonCardSubtitle class='inter text-base font-semibold tracking-wide text-dark pr-10'>
+            <IonCardSubtitle class='inter text-base font-semibold pt-5 pb-5 tracking-wide text-dark pr-10'>
                 {question}
             </IonCardSubtitle>
 
